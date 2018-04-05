@@ -47,7 +47,7 @@ $product_type=$row['type'];
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-xs-12 col-sm-8">
                         	<div class="panel-body">
                             <img src="images/<?php echo $product_image; ?>" class="img-responsive" style="width:100%" alt="Image"></div>
                         </div>

@@ -47,7 +47,7 @@ if($_SESSION['is_logged_in']==0){
 	    		for($i=0;$i<$num_rows;$i++)
 	    		{
 	    			$row=mysqli_fetch_array($result);
-                    echo "<div class=\"col-md-3 col-sm-3 col-xs-3\">
+                    echo "<div class=\"col-md-3 col-sm-6 col-xs-12\">
                             <div class=\"panel panel-success\">
                                 <div class=\"panel-heading\">".$row['product_name']."</div>
                                 
