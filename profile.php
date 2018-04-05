@@ -33,8 +33,8 @@ if($_SESSION['is_logged_in']==0){
 	    				<p class="text-warning">Looks like you have not verified your email.please verify!</p>
 	    			
 	    		<?php }
-	    			else{
-	    				
+	    			else if($row['type']=="admin"){
+	    				header('Location:admin/profile.php');
 	    			}
 	    		
 
@@ -47,14 +47,16 @@ if($_SESSION['is_logged_in']==0){
 	    		for($i=0;$i<$num_rows;$i++)
 	    		{
 	    			$row=mysqli_fetch_array($result);
-	    			echo "<div class=\"col-md-3\">
-	    					<div class=\"product\">
-	    						<img src=\"images/".$row['prod_img_file']."\" style=\"width:100%;height:250px\">
-								<h4 class=\"text_center\"><b>".$row['product_name']."</b></h4>
-	    						<p>Price INR ".$row['product_price']."</p>
-	    						<a href=\"product_desc.php?id=".$row['product_id']."\" class=\"btn btn-danger btn-block\">View Item</a>
-	    					</div>
-	    				  </div>";
+                    echo "<div class=\"col-md-3\">
+                            <div class=\"panel panel-success\">
+                                <div class=\"panel-heading\">".$row['product_name']."</div>
+                                
+                                <div class=\"panel-body\"><img src=\"images/".$row['prod_img_file']."\"class=\"img-responsive\" style=\"width:100%\" alt=\"Image\"></div>
+                                
+                                <p>Price INR ".$row['product_price']."</p>
+                                <a href=\"product_desc.php?id=".$row['product_id']."\" class=\"btn btn-danger btn-block\">View Item</a>
+                            </div>
+                          </div>";
 	    		}
 
 	    		?>

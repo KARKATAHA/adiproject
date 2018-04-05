@@ -13,7 +13,7 @@
 		$user_name=$_POST['username'];
 		$email=$_POST['email'];
 		$password=$_POST['password'];
-
+		
 		$query="SELECT `email` FROM `users` where `username`= '$user_name'";
 
 		$result=mysqli_query($con, $query);
