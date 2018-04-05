@@ -32,6 +32,8 @@ if($_SESSION['is_logged_in']==0){
 				</div>
 				<div class="row">
 					<div class="col-md-3">
+						<h3 style="color:black">ProductType</h3>
+						<br>
 						<h3 style="color:black">Name</h3>
 						<br>
 						<h3 style="color:black">Product Id</h3>
@@ -41,6 +43,8 @@ if($_SESSION['is_logged_in']==0){
 						<h3 style="color:black">Quantity</h3>
 					</div>
 					<div class="col-md-3" style="margin-top: 20px;">
+						<input type="text" name="product_type">
+						<p><br><br></p>
 						<input type="text" name="product_name">
 						<p><br><br></p>
 						<input type="text" name="product_id">

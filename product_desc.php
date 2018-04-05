@@ -51,7 +51,8 @@ $product_type=$row['type'];
                         	<div class="panel-body">
                             <img src="images/<?php echo $product_image; ?>" class="img-responsive" style="width:100%" alt="Image"></div>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 col-sm-4">
+                        	<h3><a style="color: blue"><?php echo $product_type; ?></a></h3>
                             <h4><?php echo $product_name; ?></h4>
                             <h2>Price INR &nbsp<?php echo $product_price; ?></h2>
 

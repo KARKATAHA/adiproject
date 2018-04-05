@@ -11,6 +11,7 @@
 	else
 	{
 		$prod_id=$_GET['id'];
+		$prod_type=$_POST['product_type'];
 		$prod_name=$_POST['product_name'];
 		$prod_img_file=$_POST['prod_img_filename'];
 		$prod_price=$_POST['product_price'];
@@ -24,7 +25,7 @@
 
 		if($num_rows==1)
 		{
-			$query="UPDATE `products` SET `product_name` = '$prod_name', `product_price` = '$prod_price', `prod_img_file` = '$prod_img_file', `product_desc` = '$prod_desc', `quantity` = '$prod_quantity' WHERE `products`.`product_id` = '$prod_id'";
+			$query="UPDATE `products` SET `product_name` = '$prod_name', `product_price` = '$prod_price', `prod_img_file` = '$prod_img_file', `product_desc` = '$prod_desc', `quantity` = '$prod_quantity',`type`='$prod_type' WHERE `products`.`product_id` = '$prod_id'";
 			if(mysqli_query($con,$query)){
 
   				echo '<script language="javascript">';
