@@ -29,7 +29,7 @@
         <li><a href="mycart.php" class="glyphicon glyphicon-shopping-cart">Cart</a></li>
         
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> My Account<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><?php
                   if(!isset($_SESSION['is_logged_in'])){

@@ -52,9 +52,11 @@ include "includes/dbconnect.php";
                 {
                     $row=mysqli_fetch_array($result);
                     echo "<div class=\"col-md-3\">
-                            <div class=\"product\">
-                                <img src=\"images/".$row['prod_img_file']."\" style=\"width:100%;height:250px\">
-                                <h4 class=\"text_center\"><b>".$row['product_name']."</b></h4>
+                            <div class=\"panel panel-success\">
+                                <div class=\"panel-heading\">".$row['product_name']."</div>
+                                
+                                <div class=\"panel-body\"><img src=\"images/".$row['prod_img_file']."\"class=\"img-responsive\" style=\"width:100%\" alt=\"Image\"></div>
+                                
                                 <p>Price INR ".$row['product_price']."</p>
                                 <a href=\"product_desc.php?id=".$row['product_id']."\" class=\"btn btn-danger btn-block\">View Item</a>
                             </div>
