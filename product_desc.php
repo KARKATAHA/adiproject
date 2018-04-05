@@ -12,6 +12,7 @@ $product_price=$row['product_price'];
 $product_image=$row['prod_img_file'];
 $product_desc=$row['product_desc'];
 $product_quantity=$row['quantity'];
+$product_type=$row['type'];
 ?>
 <html>
 	<?php
@@ -38,7 +39,7 @@ $product_quantity=$row['quantity'];
 ?>	
 
 
-    <body style="background-color:#fff">
+    <body>
 		<?php
          include "includes/navbar.php";
         ?>
@@ -47,7 +48,8 @@ $product_quantity=$row['quantity'];
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="images/<?php echo $product_image; ?>" style="width:100%;height:300px">
+                        	<div class="panel-body">
+                            <img src="images/<?php echo $product_image; ?>" class="img-responsive" style="width:100%" alt="Image"></div>
                         </div>
                         <div class="col-md-8">
                             <h4><?php echo $product_name; ?></h4>
