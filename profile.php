@@ -19,7 +19,7 @@ if($_SESSION['is_logged_in']==0){
         include "includes/navbar.php";
     	?>
         <div class="container">
-    		<div class="row">
+    		<div class="row" >
 
     			<?php
     				$user_id=$_SESSION['id'];
@@ -49,7 +49,7 @@ if($_SESSION['is_logged_in']==0){
 	    			$row=mysqli_fetch_array($result);
                     echo "<div class=\"col-md-3 col-sm-5 col-xs-11\">
                             <div class=\"panel panel-success\">
-                                <div class=\"panel-heading\"><h3>".$row['product_name']."</h3>
+                                <div class=\"panel-heading\"><h4>".$row['product_name']."</h4>
                                 </div>
                                 
                                 <div class=\"panel-body\"><img src=\"images/".$row['prod_img_file']."\"class=\"img-responsive\" style=\"width:100%\" alt=\"Image\"></div>
