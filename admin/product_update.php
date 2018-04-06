@@ -48,7 +48,7 @@ if($_SESSION['is_logged_in']==0){
 						<p><br><br></p>
 						<input type="text" name="product_name">
 						<p><br><br></p>
-						<input type="text" name="product_id">
+						<h3 style="color:black"><?php echo $product_id ?></h3>
 						<p><br><br></p>
 						<input type="text" name="product_price">
 						<p><br><br></p>
