@@ -8,12 +8,12 @@ if($_SESSION['is_logged_in']==0){
 <!DOCTYPE html>
 <html>
 	<?php
-	include "includes/navbar.php";
-	?>
+        include "includes/header.php";
+    ?>
 <body>
 		<?php
-        include "includes/header.php";
-    	?>
+        include "includes/navbar.php";
+        ?>
     	<div class="container">
 
     	<div class="row">
@@ -31,10 +31,10 @@ if($_SESSION['is_logged_in']==0){
     		{
     			$row=mysqli_fetch_array($result);
     			$sum=$sum+$row['product_count']*$row['product_price'];
-    			echo "<div class=\"col-md-10 col-sm-10\" style=\"height:120px;margin-bottom:20px\">
+    			echo "<div class=\"col-md-offset-1 col-md-10 col-sm-10\" style=\"margin-bottom:20px\">
     				    <div class=\"row\">
     					   <div class=\"col-md-3 col-sm-3 col-xs-4\">
-    						<img src=\"images/".$row['prod_img_file']."\" class=\"img-responsive\" style=\"width:100%;height:120px\">
+    						<img src=\"images/".$row['prod_img_file']."\" class=\"img-responsive\" style=\"width:100%\">
     					   </div>
     					   <div class=\"col-md-3 col-sm-4 col-xs-8\">
 	    					<h3 class=\"img-responsive\">".$row['product_name']."</h3>
@@ -58,11 +58,17 @@ if($_SESSION['is_logged_in']==0){
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-sm-5 col-xs-5">         
+            <div class="col-md-3 col-sm-3 col-xs-1">         
+               
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-5">         
                 <a class="btn btn-primary btn-lg btn-block"><?php echo $sum ?></a>
             </div>
-            <div class="col-md-4 col-sm-5 col-xs-5">          
+            <div class="col-md-3 col-sm-3 col-xs-5">          
                 <a href="haha.php"class="btn btn-primary btn-lg btn-block">CheckOut</a>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-1">         
+                
             </div>
         </div>
     </div>	
