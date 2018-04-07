@@ -51,9 +51,10 @@ include "includes/dbconnect.php";
                 for($i=0;$i<$num_rows;$i++)
                 {
                     $row=mysqli_fetch_array($result);
-                    echo "<div class=\"col-md-3\">
+                    echo "<div class=\"col-md-3 col-sm-5 col-xs-11\">
                             <div class=\"panel panel-success\">
-                                <div class=\"panel-heading\">".$row['product_name']."</div>
+                                <div class=\"panel-heading\"><h4>".$row['product_name']."</h4>
+                                </div>
                                 
                                 <div class=\"panel-body\"><img src=\"images/".$row['prod_img_file']."\"class=\"img-responsive\" style=\"width:100%\" alt=\"Image\"></div>
                                 
