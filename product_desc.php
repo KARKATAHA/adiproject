@@ -52,7 +52,7 @@ $product_type=$row['type'];
                             <img src="images/<?php echo $product_image; ?>" class="img-responsive" style="width:80%; margin-left:10%;" alt="Image"></div>
                         </div>
                         <div class="col-md-8 col-xs-12 col-sm-8">
-                        	<h3><a style="color:blue;width: 100%;"><?php echo $product_type; ?></a></h3>
+                        	<h4><a style="color:blue;width: 100%;"><?php echo $product_type; ?></a></h4>
                             <h4><?php echo $product_name; ?></h4>
                             <h2>Price INR &nbsp<?php echo $product_price; ?></h2>
 
