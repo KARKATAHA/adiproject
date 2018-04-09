@@ -17,7 +17,7 @@ if($_SESSION['is_logged_in']==0){
 	<div class="container">
 		<div class="row">
 			
-			<div class="col-md-offset-2 col-md-8">
+			<div class="col-md-6">
 				<form method="POST" class="form" action="perform_add_prod.php">
 				<div class="row">
 					<div class="col-md-3">
@@ -72,7 +72,9 @@ if($_SESSION['is_logged_in']==0){
 				<input id="register" type="submit" value="Save" class="btn btn-success btn-block">
 				</form>
 			</div>
-
+			<div class="col-md-6">
+				
+			</div>
 
 
 		</div>
