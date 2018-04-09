@@ -48,8 +48,11 @@ include "includes/dbconnect.php";
 
                 $num_rows=mysqli_num_rows($result);             
 
-                for($i=0;$i<$num_rows;$i++)
+                for($i=1;$i<=$num_rows;$i++)
                 {
+                    if($i%4==0){
+                        echo "<div class=\"row\">";
+                    }
                     $row=mysqli_fetch_array($result);
                     echo "<div class=\"col-md-3 col-sm-5 col-xs-11\">
                             <div class=\"panel panel-success\">
@@ -62,6 +65,9 @@ include "includes/dbconnect.php";
                                 <a href=\"product_desc.php?id=".$row['product_id']."\" class=\"btn btn-danger btn-block\">View Item</a>
                             </div>
                           </div>";
+                    if($i%4==0){
+                        echo "</div>";
+                    }
                 }
 
                 ?>
