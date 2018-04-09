@@ -50,11 +50,8 @@ include "includes/dbconnect.php";
 
                 for($i=1;$i<=$num_rows;$i++)
                 {
-                    if($i%4==0){
-                        echo "<div class=\"row\">";
-                    }
                     $row=mysqli_fetch_array($result);
-                    echo "<div class=\"col-md-3 col-sm-5 col-xs-11\">
+                    echo "<div class=\"col-md-3 col-sm-5 col-xs-12\">
                             <div class=\"panel panel-success\">
                                 <div class=\"panel-heading\"><h4>".$row['product_name']."</h4>
                                 </div>
@@ -66,7 +63,7 @@ include "includes/dbconnect.php";
                             </div>
                           </div>";
                     if($i%4==0){
-                        echo "</div>";
+                        echo "</div> <div class=\"row\">";
                     }
                 }
 
