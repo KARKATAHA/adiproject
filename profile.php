@@ -13,40 +13,47 @@ if($_SESSION['is_logged_in']==0){
     ?>
 	
 
-	<body style="background-color:#fff">
-		
+    <body style="background-color:#fff">
+        
         <?php
         include "includes/navbar.php";
-    	?>
+        ?>
         <div class="container">
-    		<div class="row" >
+            <div class="row">
 
-    			<?php
-    				$user_id=$_SESSION['id'];
-    				$query="SELECT * FROM users WHERE id='$user_id'";
-    				$result=mysqli_query($con, $query);
+                <?php
+                if(isset($_SESSION['is_logged_in'])){
+                    if($_SESSION['is_logged_in']==1){
+                    //header('Location: profile.php');
+                        $user_id=$_SESSION['id'];
+                        $query="SELECT * FROM users WHERE id='$user_id'";
+                        $result=mysqli_query($con, $query);
 
-	    			$row=mysqli_fetch_array($result);
+                        $row=mysqli_fetch_array($result);
 
-	    			if($row['type']=="newuser"){?>
+                        if($row['type']=="newuser"){?>
 
-	    				<p class="text-warning">Looks like you have not verified your email.please verify!</p>
-	    			
-	    		<?php }
-	    			else if($row['type']=="admin"){
-	    				header('Location:admin/profile.php');
-	    			}
-	    		
+                            <p class="text-warning">Looks like you have not verified your email.please verify!</p>
+                    
+                <?php    }
+                        else{
 
-	    		$query="SELECT * FROM `products`";
+                        }
+                    }
+                    
+                 }
+                    
+                
 
-	    		$result=mysqli_query($con, $query);
+                $query="SELECT * FROM `products`";
 
-	    		$num_rows=mysqli_num_rows($result);	    		
+                $result=mysqli_query($con, $query);
 
-	    		for($i=0;$i<$num_rows;$i++)
-	    		{
-	    			$row=mysqli_fetch_array($result);
+                $num_rows=mysqli_num_rows($result);             
+
+                for($i=1;$i<=$num_rows;$i++)
+                {
+                    $row=mysqli_fetch_array($result);
                     echo "<div class=\"col-md-3 col-sm-5 col-xs-12\">
                             <div class=\"panel panel-success\">
                                 <div class=\"panel-heading\"><h4>".$row['product_name']."</h4>
@@ -61,10 +68,10 @@ if($_SESSION['is_logged_in']==0){
                     if($i%4==0){
                         echo "</div> <div class=\"row\">";
                     }
-	    		}
+                }
 
-	    		?>
-    		</div>
-    	</div> 	
-	</body>
+                ?>
+            </div>
+        </div>  
+    </body>
 </html>
