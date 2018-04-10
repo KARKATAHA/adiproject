@@ -47,7 +47,7 @@ if($_SESSION['is_logged_in']==0){
 	    		for($i=0;$i<$num_rows;$i++)
 	    		{
 	    			$row=mysqli_fetch_array($result);
-                    echo "<div class=\"col-md-3 col-sm-5 col-xs-11\">
+                    echo "<div class=\"col-md-3 col-sm-5 col-xs-12\">
                             <div class=\"panel panel-success\">
                                 <div class=\"panel-heading\"><h4>".$row['product_name']."</h4>
                                 </div>
@@ -58,6 +58,9 @@ if($_SESSION['is_logged_in']==0){
                                 <a href=\"product_desc.php?id=".$row['product_id']."\" class=\"btn btn-danger btn-block\">View Item</a>
                             </div>
                           </div>";
+                    if($i%4==0){
+                        echo "</div> <div class=\"row\">";
+                    }
 	    		}
 
 	    		?>
