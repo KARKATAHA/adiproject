@@ -22,14 +22,16 @@ include "functions/function.php";
             <div class="row">
                 <?php
                     echo "<br>";
-                    if(isset($_GET['cat_id']) and $_GET['cat_id']>0){
-                        getProductsByCategory($_GET['cat_id']);
-                    }
-                    elseif(!isset($_GET['cat_id'])){
-                        getProducts();
+                    if(isset($_GET['search'])){
+                        if($_GET['user_query']){
+                            getProductsByQuery($_GET['user_query']);
+                        }
+                        else{
+                            getProducts();
+                        }
                     }
                     else{
-                        echo "Invalied URL!";
+                        getProducts();
                     }
                 ?>
             </div>

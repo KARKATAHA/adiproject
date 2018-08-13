@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "includes/dbconnect.php";
-
+include "functions/function.php";
 if($_SESSION['is_logged_in']==0){
     header('Location: index.php');
 }

@@ -41,7 +41,7 @@
 			echo "<script> location.href='login.php'; </script>";
 		}
 		else{
-			$query="INSERT INTO `users` (`id`, `username`, `password`, `email`, `type`) VALUES (NULL, '$user_name', '$password', '$email','user')";
+			$query="INSERT INTO `users` (`id`, `username`, `password`, `email`, `type`,`img_file_name`) VALUES (NULL, '$user_name', '$password', '$email','user','profile_pic.jpg')";
 			if(mysqli_query($con,$query)){
 	     //query are in objective to access individual element convert into array
   				$_SESSION['reg']=1;
@@ -50,6 +50,6 @@
 				echo '</script>';
   				echo "<script> location.href='login.php'; </script>";
   			}
-	}
+		}
 	}
 ?>

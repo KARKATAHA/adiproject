@@ -8,23 +8,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.php">SuperFast Eshop</a>
+      <a class="navbar-brand" href="../index.php">SuperFast Eshop</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <form class="navbar-form navbar-left" action="results.php">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" name="user_query">
-        </div>
-        <button type="submit" class="btn btn-default" name="search" value="Search">Submit</button>
-      </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="mycart.php" class="glyphicon glyphicon-shopping-cart">Cart</a></li>
+        <li><a href="../mycart.php" class="glyphicon glyphicon-shopping-cart">Cart</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span></span>Shop By Category<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="index.php">All</a></li>
+            <li><a href="../index.php">All</a></li>
             <?php
               getCats();
             ?>
@@ -35,20 +29,21 @@
           <ul class="dropdown-menu">
             <li><?php
                   if(!isset($_SESSION['is_logged_in'])){
-                    echo "<a href=\"login.php\"><span ></span>Login</a>";
+                    echo "<a href=\"../login.php\"><span ></span>Login</a>";
                   }
                   else{
-                    echo "<a href=\"customer/my_account.php\">".$_SESSION['username']."</a>";
+                    echo "<a href=\"../customer/my_account.php\">".$_SESSION['username']."</a>";
                   }
                 ?>
             </li>
-            <li><a href="offers.php">Offers</a></li>
-            <?php
+            <li><a href="my_orders.php">Orders</a></li>
+            <li role="separator" class="divider"></li>
+            <li><?php
                   if(isset($_SESSION['is_logged_in']) and $_SESSION['is_logged_in']==1){
-                    echo "<li role=\"separator\" class=\"divider\"></li>
-                          <li><a href=\"logout.php\"><span></span>Log Out</a></li>";
+                    echo "<a href=\"logout.php\"><span></span>Log Out</a>";
                   }
-            ?>
+                ?>
+            </li>
           </ul>
         </li>
       </ul>

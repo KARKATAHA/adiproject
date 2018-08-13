@@ -8,11 +8,10 @@
 	<!-- sets bootstrap features according to device screen width -->
 	
 	<title>Online Store</title>
-	<link rel="shortcut icon" type="image/png" href="images\icon.png"/><!--Adding fevicon with the name of website-->
+	<link rel="shortcut icon" type="image/png" href="customer_image\icon.png"/><!--Adding fevicon with the name of website-->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<!-- connecting tobootstrap3.3.7 no need to add file with system -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link href="CSS\style.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
 </head>

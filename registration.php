@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include "functions/function.php";
 if(isset($_SESSION['is_logged_in'])){
     if($_SESSION['is_logged_in']==1){
         header('Location: profile.php');
