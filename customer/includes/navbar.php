@@ -40,7 +40,7 @@
             <li role="separator" class="divider"></li>
             <li><?php
                   if(isset($_SESSION['is_logged_in']) and $_SESSION['is_logged_in']==1){
-                    echo "<a href=\"logout.php\"><span></span>Log Out</a>";
+                    echo "<a href=\"../logout.php\"><span></span>Log Out</a>";
                   }
                 ?>
             </li>
